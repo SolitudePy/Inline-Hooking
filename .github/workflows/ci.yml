@@ -20,8 +20,7 @@ jobs:
     - name: Build
       shell: cmd
       run: |
-        gcc -m32 src/rel_jmp_hook.c -o rel_jmp_hook_x86.exe -lws2_32
-        gcc -m32 src/ret_hook.c -o ret_hook_x86.exe -lws2_32
+        gcc -m32 src/rel_jmp_hook.c -o rel_jmp_hook_x86.exe
         gcc src/ret_hook.c -o ret_hook_x64.exe -lws2_32
         
     - name: Create Release
@@ -30,7 +29,6 @@ jobs:
       with:
         files: |
           rel_jmp_hook_x86.exe
-          ret_hook_x86.exe
           ret_hook_x64.exe
         draft: false
         prerelease: false
