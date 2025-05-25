@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - '**' # Trigger on all branches
+    tags:
+      - '**' # Trigger on all tags (e.g., v1.0, v2.0-alpha)
 
 permissions:
   contents: write
