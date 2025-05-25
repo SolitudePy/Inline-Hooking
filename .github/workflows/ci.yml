@@ -2,8 +2,8 @@ name: Build and Release
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - '**' # Trigger on all branches
 
 permissions:
   contents: write
